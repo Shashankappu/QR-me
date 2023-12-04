@@ -3,10 +3,12 @@ import 'package:qr_scanner/generate_qr_code.dart';
 import 'package:qr_scanner/scan_qr_code.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -37,13 +39,13 @@ class _HomePageState extends State<HomePage>{
               setState(() {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ScanQRCode()));
               });
-            }, child: Text("Scan Qr")),
+            }, child: const Text("Scan Qr")),
             const SizedBox(height: 40,),
             ElevatedButton(onPressed:(){
               setState(() {
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>GenerateQRCode()));
               });
-            },child: Text("Generate QR"))
+            },child: const Text("Generate QR"))
           ],
         )
 

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -19,6 +17,7 @@ class _GenerateQRCodeState extends State<GenerateQRCode> {
       appBar: AppBar(title: Text("Generate QR code Page"),),
       body: Center(
         child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
